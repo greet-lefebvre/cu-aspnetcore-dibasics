@@ -1,0 +1,37 @@
+﻿@model CoreCourse.DIBasics.Web.ViewModels.CoffeeViewModel
+@{
+    ViewData["Title"] = "Coffee";
+}
+
+<h1>Coffee Cup - No Dependency Injection</h1>
+<p>On this page, the Coffee Cup was created by instantiating the Cup, Sweetener and Creamer by using the <code>new</code> keyword.</p>
+<p>There's no Dependency Injection going on, which means the Coffee Cup cannot be configured at Startup. The Coffee Cup will always have this configuration:</p>
+<p>
+    <b>Hard coded configuration</b><br />
+    uses <b>@Model.CoffeeCup.Creamer.Name</b> as <code>ICreamer</code> and <b>@Model.CoffeeCup.Sweetener.Name</b> as <code>ISweetener</code>
+</p>
+
+<article class="container">
+    <div class="row">
+        <aside class="col-md-4">
+            <div class="mug-components">
+                <div style="z-index:0;background-image:url('../images/coffeemug/mug-bg.png')"></div>
+                <div style="z-index: 1; background-image: url('../images/coffeemug/coffee.png') "></div>
+                <div style="z-index: 1; background-image: url('../images/coffeemug/@(Model.CoffeeCup.Creamer.Name).png')"></div>
+                <div style="z-index: 1; background-image: url('../images/coffeemug/@(Model.CoffeeCup.Sweetener.Name).png')"></div>
+                <div style="z-index: 999; background-image: url('../images/coffeemug/mug-outline.png')"></div>
+            </div>
+        </aside>
+        <section class="col-md-8">
+            <header><h3>Coffee Cup</h3></header>
+            <dl>
+                <dt>Creamer in use</dt>
+                <dd><big>@Model.CoffeeCup.Creamer.Name</big></dd>
+            </dl>
+            <dl>
+                <dt>Sweetener in use</dt>
+                <dd><big>@Model.CoffeeCup.Sweetener.Name</big></dd>
+            </dl>
+        </section>
+    </div>
+</article>

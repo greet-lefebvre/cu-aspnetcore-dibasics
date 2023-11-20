@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>State Management</h2>
+        <div>
+            <p>This applications helps you understand the basics of State Management in ASP.NET Core.</p>
+            <p>Click on one of the links to navigate to a specific view.</p>
+            <p>For a clear understanding, you will need access to the accompanying <b>ASP.NET Core</b> course book</p>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2><a asp-action="Coffee" asp-controller="Home">Coffee Cup<br />No DI</a>&nbsp;&raquo;</h2>
+                    <ul>
+                        <li>Manual instantiation of a "Coffee" component</li>
+                        <li>Not configurable at startup</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h2><a asp-action="CoffeeDI" asp-controller="Home">Coffee Cup<br />With DI</a>&nbsp;&raquo;</h2>
+                    <ul>
+                        <li>IOC instantiation of a "Coffee" component</li>
+                        <li>Highly configurable at startup</li>
+                        <li>Highly extendable</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

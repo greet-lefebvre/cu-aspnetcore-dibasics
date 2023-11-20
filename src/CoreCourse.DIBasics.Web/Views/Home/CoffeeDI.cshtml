@@ -1,0 +1,69 @@
+﻿@model CoreCourse.DIBasics.Web.ViewModels.CoffeeViewModel
+@{
+    ViewData["Title"] = "Coffee Cup - With DI";
+}
+
+<h1>CoffeeCup - With Dependency Injection</h1>
+
+<h2>Coffee Cup - With Dependency Injection</h2>
+<p>On this page, the Coffee Cup and its dependencies are <b>injected</b> by the ASP.NET Core's IOC container.</p>
+<p>This means the Coffee Cup can be configured at Startup. Please open up <kbd>appsettings.json</kbd> and set the <code>CoffeeSettings</code> to a value of <b>1 - 4</b> to see this in action. See table below.</p>
+<article class="container">
+    <div class="row">
+        <aside class="col-md-4">
+            <div class="mug-components">
+                <div style="z-index:0;background-image:url('../images/coffeemug/mug-bg.png')"></div>
+                <div style="z-index:1;background-image:url('../images/coffeemug/coffee.png')"></div>
+                <div style="z-index:1;background-image:url('../images/coffeemug/@(Model.CoffeeCup.Creamer.Name).png')"></div>
+                <div style="z-index:1;background-image:url('../images/coffeemug/@(Model.CoffeeCup.Sweetener.Name).png')"></div>
+                <div style="z-index:999;background-image:url('../images/coffeemug/mug-outline.png')"></div>
+            </div>
+        </aside>
+        <section class="col-md-8">
+            <header><h3>DI Coffee Cup</h3></header>
+            <dl>
+                <dt>Creamer in use</dt>
+                <dd><big>@Model.CoffeeCup.Creamer.Name</big></dd>
+            </dl>
+            <dl>
+                <dt>Sweetener in use</dt>
+                <dd><big>@Model.CoffeeCup.Sweetener.Name</big></dd>
+            </dl>
+        </section>
+    </div>
+</article>
+<p>The table below shows the possible values of <code>CoffeeSettings</code>. This value is read from <kbd>appsettings.json</kbd> in the <code>ConfigureServices</code> method, so don't forget to restart after changing.</p>
+<table class="table table-condensed">
+    <tr>
+        <th style="width:30%">CoffeeSettings #</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><big>1</big></td>
+        <td>
+            A regular cup of coffee<br />
+            <small>uses <b>Cream</b> as <code>ICreamer</code> and <b>Sugar</b> as <code>ISweetener</code></small>
+        </td>
+    </tr>
+    <tr>
+        <td><big>2</big></td>
+        <td>
+            Milk &amp; honey<br />
+            <small>uses <b>Milk</b> as <code>ICreamer</code> and <b>Honey</b> as <code>ISweetener</code></small>
+        </td>
+    </tr>
+    <tr>
+        <td><big>3</big></td>
+        <td>
+            Almost Irish<br />
+            <small>uses <b>Whiskey</b> as <code>ICreamer</code> and <b>Sugar</b> as <code>ISweetener</code></small>
+        </td>
+    </tr>
+    <tr>
+        <td><big>4</big></td>
+        <td>
+            Totally random<br />
+            <small>uses <b>RandomCreamer</b> as <code>ICreamer</code> and <b>RandomSweetener</b> as <code>ISweetener</code></small>
+        </td>
+    </tr>
+</table>

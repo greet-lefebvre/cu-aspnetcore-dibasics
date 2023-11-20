@@ -1,0 +1,9 @@
+
+language: csharp
+dotnet: 2.1
+sudo: false
+env:
+    global:
+        - DOTNET_CLI_TELEMETRY_OPTOUT: 1
+script:
+    - dotnet build src/CoreCourse.DIBasics.sln -c Release

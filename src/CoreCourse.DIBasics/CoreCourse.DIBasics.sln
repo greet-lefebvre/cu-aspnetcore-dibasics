@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCourse.DIBasics.Web", "CoreCourse.DIBasics.Web\CoreCourse.DIBasics.Web.csproj", "{46B32E56-D07B-40C1-A48C-CBE8C463C888}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCourse.DIBasics.Core", "CoreCourse.DIBasics.Core\CoreCourse.DIBasics.Core.csproj", "{0BEE0714-F94B-469D-BCCC-D8CBD478846D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46B32E56-D07B-40C1-A48C-CBE8C463C888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B32E56-D07B-40C1-A48C-CBE8C463C888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B32E56-D07B-40C1-A48C-CBE8C463C888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B32E56-D07B-40C1-A48C-CBE8C463C888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BEE0714-F94B-469D-BCCC-D8CBD478846D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BEE0714-F94B-469D-BCCC-D8CBD478846D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BEE0714-F94B-469D-BCCC-D8CBD478846D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BEE0714-F94B-469D-BCCC-D8CBD478846D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F63E77B4-DE21-4945-B49B-3E92428C7184}
+	EndGlobalSection
+EndGlobal
